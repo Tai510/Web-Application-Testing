@@ -8,6 +8,10 @@
     margin: 0 100px;
 }
 
+.display h1 {
+    cursor: pointer;
+}
+
 .dashBoard {
     width: 550px;
     height: 100px;
@@ -15,7 +19,7 @@
     padding-top: 50px;
 }
 
-.dashBoard button {
+.Batter-Up button {
     height: 50px;
     width: 100px;
     margin: 10px;
@@ -23,4 +27,16 @@
     cursor: pointer;
     font-size: 20px;
     outline: none;
+}
+
+.status {
+    width: 550px;
+    margin: auto;
+}
+
+.hit-section {
+    display: flex;
+}
+.out-section {
+    display: flex;
 }

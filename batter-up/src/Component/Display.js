@@ -8,13 +8,21 @@ function Display() {
     const [foul, setFoul] = useState(0);
     const [hit, setHit] = useState([]);
 
+    const [out, setOut] = useState(0);
+
     return (
     <div className='Batter-Up'>
 
         <div className='display'>
-            <h1>Strike : {strike}</h1>
-            <h1>Ball : {ball}</h1>
-            <h2>Foul : {foul}</h2>
+            <h1 onClick={() => {
+                setStrike(0)
+            }}>Strike : {strike}</h1>
+            <h1 onClick={() => {
+                setBall(0)
+            }}>Ball : {ball}</h1>
+            <h2 onClick={() => {
+                setFoul(0)
+            }}>Foul : {foul}</h2>
         </div> {/* display end */}
 
         <div className='dashBoard'>
@@ -34,11 +42,8 @@ function Display() {
                     }
                 }}>Foul</button>
                 <button>Hit</button>
-        </div> {/* dashBoard end  */}
 
-        <div>
-                <h1>Hit Results : {hit}</h1>
-        </div>
+        </div> {/* dashBoard end  */}
 
     </div> /* Batter-Up end */
     )
