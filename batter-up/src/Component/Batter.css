@@ -1,0 +1,26 @@
+.Batter-Up {
+    border: 1px solid black;
+}
+
+.display {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+
+.dashBoard {
+    width: 550px;
+    height: 100px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.dashBoard button {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+}

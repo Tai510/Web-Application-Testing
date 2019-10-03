@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './App.css';
 import Display from './Component/Display';
 import DashBoard from './Component/DashBoard';
 
 function App() {
+  const [ball, setBall] = useState(0);
+    const [strike, setStrike] = useState(0);
+    const [foul, setFoul] = useState(0);
+    const [hit, setHit] = useState([]);
   return (
     <div className="App">
-          <Display />
+          <Display ball={ball} strike={strike} foul={foul} />
+          {/* <DashBoard ball={ball} strike={strike} foul={foul} /> */}
     </div>
   );
 }

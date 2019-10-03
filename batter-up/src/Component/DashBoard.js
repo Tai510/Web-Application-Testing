@@ -1,19 +1,18 @@
-import React from 'react';
-import Display from './Display'
+// import React from 'react';
 
-function DashBoard(strike, setStrike) {
-    return (
-        <div className='dashBoard'>
-            <div>
-                <button onClick={() => {
-                    setStrike(strike + 1)
-                }}>Strike</button>
-                <button>Ball</button>
-                <button>Foul</button>
-                <button>Hit</button>
-            </div>
-        </div> /* dashBoard end */
-    )
-}
 
-export default DashBoard;
+// function DashBoard(){
+
+//     return (
+//         <div className='dashBoard'>
+//             <div>
+//                 <button>Ball</button>
+//                 <button>Strike</button>
+//                 <button>Foul</button>
+//                 <button>Hit</button>
+//             </div>
+//         </div> /* dashBoard end */
+//     )
+// }
+
+// export default DashBoard;
