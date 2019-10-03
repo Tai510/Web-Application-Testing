@@ -1,11 +1,17 @@
 .Batter-Up {
     border: 1px solid black;
+    height: 470px;
+    background: #3B5573;
+    margin-top: 100px;
 }
 
 .display {
     display: flex;
     justify-content: space-between;
     margin: 0 100px;
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .display h1 {
@@ -39,4 +45,14 @@
 }
 .out-section {
     display: flex;
+}
+
+.result  h1 {
+   font-size: 100px;
+   border: 1px solid white;
+   font-family: 'Luckiest Guy', cursive;
+   color: white;
+   text-shadow: 1px 1px black;
+   padding-top: 25px;
+   height : 100px;
 }

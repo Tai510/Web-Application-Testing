@@ -6,9 +6,9 @@ function Display() {
     const [ball, setBall] = useState(0);
     const [strike, setStrike] = useState(0);
     const [foul, setFoul] = useState(0);
-    const [hit, setHit] = useState([]);
-
     const [out, setOut] = useState(0);
+    const [hit, setHit] = useState([]);
+    var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!']
 
     return (
     <div className='Batter-Up'>
@@ -41,9 +41,15 @@ function Display() {
                     setFoul(foul + 1)
                     }
                 }}>Foul</button>
-                <button>Hit</button>
+                <button onClick={() => {
+                    setHit(myArray[Math.floor(Math.random() * myArray.length)])
+                }}>Hit</button>
 
         </div> {/* dashBoard end  */}
+
+        <div className='result'>
+                <h1>{hit}</h1>
+        </div>
 
     </div> /* Batter-Up end */
     )
