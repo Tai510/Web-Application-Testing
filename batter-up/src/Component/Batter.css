@@ -1,8 +1,16 @@
 .Batter-Up {
     border: 1px solid black;
-    height: 470px;
+    height: 670px;
     background: #3B5573;
-    margin-top: 100px;
+    margin-top: 80px;
+}
+
+.header h1 {
+    font-size: 80px;
+    font-family: 'Notable', sans-serif;
+    color: white;
+    text-shadow: 1px 1px black;
+
 }
 
 .display {
@@ -55,4 +63,5 @@
    text-shadow: 1px 1px black;
    padding-top: 25px;
    height : 100px;
+   cursor: pointer;
 }

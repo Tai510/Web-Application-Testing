@@ -1,18 +1,64 @@
-// import React from 'react';
+import React, {useState} from 'react';
+import './Batter.css'
 
+function DashBoard() {
+ 
+    const [ball, setBall] = useState(0);
+    const [strike, setStrike] = useState(0);
+    const [foul, setFoul] = useState(0);
+    const [out, setOut] = useState(0);
+    const [hit, setHit] = useState([]);
+    var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!']
 
-// function DashBoard(){
+    return (
+    <div className='Batter-Up'>
+        
+        <div className='header'>
+            <h1>Batter Up</h1>
+        </div>
 
-//     return (
-//         <div className='dashBoard'>
-//             <div>
-//                 <button>Ball</button>
-//                 <button>Strike</button>
-//                 <button>Foul</button>
-//                 <button>Hit</button>
-//             </div>
-//         </div> /* dashBoard end */
-//     )
-// }
+        <div className='display'>
+            <h1 onClick={() => {
+                setStrike(0)
+            }}>Strike : {strike}</h1>
+            <h1 onClick={() => {
+                setBall(0)
+            }}>Ball : {ball}</h1>
+            <h2 onClick={() => {
+                setFoul(0)
+            }}>Foul : {foul}</h2>
+        </div> {/* display end */}
 
-// export default DashBoard;
+        <div className='dashBoard'>
+                <button onClick={() => {
+                    for(var i = strike; i < 3; i++) {
+                    setStrike(strike + 1)
+                    }
+                }}>Strike</button>
+                <button onClick={() => {
+                    for(var i = ball; i < 4; i++) {
+                    setBall(ball + 1)
+                    }
+                }}>Ball</button>
+                <button onClick={() => {
+                    for(var i = foul; i < 4; i++) {
+                    setFoul(foul + 1)
+                    }
+                }}>Foul</button>
+                <button onClick={() => {
+                    setHit(myArray[Math.floor(Math.random() * myArray.length)])
+                }}>Hit</button>
+
+        </div> {/* dashBoard end  */}
+
+        <div className='result'>
+                <h1 onClick={() => {
+                setHit()
+            }}>{hit}</h1>
+        </div>
+
+    </div> /* Batter-Up end */
+    )
+}
+
+export default DashBoard;

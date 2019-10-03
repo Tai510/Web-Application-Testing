@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 import './App.css';
-import Display from './Component/Display';
 import DashBoard from './Component/DashBoard';
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
     const [hit, setHit] = useState([]);
   return (
     <div className="App">
-          <Display ball={ball} strike={strike} foul={foul} />
-          {/* <DashBoard ball={ball} strike={strike} foul={foul} /> */}
+          <DashBoard ball={ball} strike={strike} foul={foul} />
     </div>
   );
 }
