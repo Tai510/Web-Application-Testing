@@ -8,6 +8,8 @@ function DashBoard() {
     const [foul, setFoul] = useState(0);
     const [out, setOut] = useState(0);
     const [hit, setHit] = useState([]);
+    const [homescore, setHomeScore] = useState(0);
+    const [awayscore, setAwayScore] = useState(0);
     var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!']
 
     return (
@@ -15,6 +17,21 @@ function DashBoard() {
         
         <div className='header'>
             <h1>Batter Up</h1>
+        </div>
+
+        <div className='scores'>
+            <div className='home'>
+                <h3>{homescore}</h3>
+                <button onClick={() => {
+                    setHomeScore(homescore + 1)
+                }}>Home</button>
+            </div>
+            <div className='away'>
+                <h3>{awayscore}</h3>
+                <button onClick={() => {
+                    setAwayScore(awayscore + 1)
+                }}>Away</button>
+            </div>
         </div>
 
         <div className='display'>
@@ -47,7 +64,7 @@ function DashBoard() {
                 }}>Foul</button>
                 <button onClick={() => {
                     setHit(myArray[Math.floor(Math.random() * myArray.length)])
-                }}>Hit</button>
+                }}>Play</button>
 
         </div> {/* dashBoard end  */}
 

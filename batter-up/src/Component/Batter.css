@@ -1,8 +1,7 @@
 .Batter-Up {
     border: 1px solid black;
-    height: 670px;
+    height: 790px;
     background: #3B5573;
-    margin-top: 80px;
 }
 
 .header h1 {
@@ -41,6 +40,8 @@
     cursor: pointer;
     font-size: 20px;
     outline: none;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bolder;
 }
 
 .status {
@@ -64,4 +65,69 @@
    padding-top: 25px;
    height : 100px;
    cursor: pointer;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 30px;
+}
+
+.scores h3 {
+    color: white;
+    font-size: 50px;
+}
+
+.home button {
+    height: 60px;
+    margin: 0;
+    width: 210px;
+    border-radius: 0;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    background: #C69A42;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.away button {
+    height: 60px;
+    margin: 0;
+    width: 210px;
+    border-radius: 0;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    background: #C64842;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.home {
+    border: 3px solid white;
+    height: 119px;
+    width: 210px;
+    background: black;
+}
+
+.home h3 {
+    border-bottom: 1px solid white;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.away {
+    border: 3px solid white;
+    height: 119px;
+    width: 210px;
+    background: black;
+}
+
+.away h3 {
+    border-bottom: 1px solid white;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
 }
