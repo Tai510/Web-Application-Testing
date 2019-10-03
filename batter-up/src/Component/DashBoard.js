@@ -26,6 +26,13 @@ function DashBoard() {
                     setHomeScore(homescore + 1)
                 }}>Home</button>
             </div>
+
+            <div className='result'>
+                <h1 onClick={() => {
+                setHit()
+            }}>{hit}</h1>
+            </div>
+
             <div className='away'>
                 <h3>{awayscore}</h3>
                 <button onClick={() => {
@@ -67,12 +74,6 @@ function DashBoard() {
                 }}>Play</button>
 
         </div> {/* dashBoard end  */}
-
-        <div className='result'>
-                <h1 onClick={() => {
-                setHit()
-            }}>{hit}</h1>
-        </div>
 
     </div> /* Batter-Up end */
     )
