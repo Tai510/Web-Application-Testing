@@ -3,6 +3,10 @@
     background: #3B5573;
 }
 
+.top-section {
+    display: flex;
+}
+
 .coin-Toss i {
     color: white;
     text-shadow: 1px 1px black;
@@ -273,12 +277,12 @@
 
 
 .Players {
-    border: 3px solid white;
-    height: 300px;
+    border: 5px solid white;
+    height: 156px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     background: #FA5F5F;
-    width: 70%;
+    width: 40%;
 }
 
 .Players input {
@@ -301,9 +305,70 @@
     text-shadow: 1px 1px white;
     border-radius: 5px;
     padding-top: 6px;
+    cursor: pointer;
 }
 
 .Players input::placeholder {
     color: white;
     text-shadow: 1px 1px black;
+}
+
+.status-Play {
+    border: 3px solid white;
+    height: 192px;
+    margin-top: 15px;
+    padding-top: 32px;
+    background: #7761E9;
+}
+
+.at-Bat {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid white; */
+    width: 800px;
+    padding: 0 20px;
+}
+
+.at-Bat h1 {
+    padding-top: 5px;
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+.at-Bat h2 {
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+.fielding {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid white; */
+    width: 800px;
+    padding: 0 20px;
+}
+
+.fielding h1 {
+    padding-top: 5px;
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 0;
+}
+
+.fielding h2 {
+    font-size: 45px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 0;
 }

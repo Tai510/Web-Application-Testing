@@ -13,11 +13,23 @@ function DashBoard(props) {
     const [homescore, setHomeScore] = useState(0);
     const [awayscore, setAwayScore] = useState(0);
     var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!'];
-    var coinToss = ['HEAD', 'TAIL'];    
+    var coinToss = ['HEAD', 'TAIL'];  
+    
+    const [players1, setPlayers1] = useState('Player 1')
+    const [players2, setPlayers2] = useState('Player 2')
+
+    function p1HandleChange(e) {
+        setPlayers1(e.target.value);
+    }
+
+    function p2HandleChange(e) {
+        setPlayers1(e.target.value);
+    }
    
     return (
     <div className='Batter-Up'>
      
+     <div className='top-section'>
         <div className='coin-Toss'>
             <h2>Click the ball for a coin toss!</h2>
             <i onClick={() => {
@@ -27,6 +39,14 @@ function DashBoard(props) {
                 setToss()
             }}>{toss}</h1>
         </div> {/* coin-Toss end */}
+
+         <div className='Players'>
+                <form>
+                    <input onChange={p1HandleChange} value={players1}></input>
+                    <input onChange={p2HandleChange} value={players2} name='player2'></input>
+                </form>
+         </div> {/* Players end */}
+      </div>   
         
         <div className='header'>
             <p id='homeOut'>Home Out {homeOut}</p>
@@ -51,11 +71,16 @@ function DashBoard(props) {
 
         </div>  {/* home end */}
 
-            <div className='result'>
-                <h1 onClick={() => {
-                setHit()
-                }}>{hit}</h1>
-            </div> {/* result end */}
+    <div className='status-Play'>
+        <div className='at-Bat'>
+            <h1>At Bat</h1>
+            <h2>{players1}</h2>
+        </div> {/* at-Bat end */}
+        <div className='fielding'>
+            <h1>Fielding</h1>
+            <h2>{players2}</h2>
+        </div> {/* fielding end */}
+    </div> {/* status-Play end */}
 
         <div className='away'>
             <span><h3>Away</h3></span>
@@ -73,13 +98,11 @@ function DashBoard(props) {
 
     </div> {/* scores end */}
 
-        <div className='Players'>
-                <form>
-                    <input name='player1' placeholder='Player 1'></input>
-                    <input name='player2' placeholder='Player 2'></input>
-                    <button>Save Players</button>
-                </form>
-        </div> {/* Players end */}
+        <div className='result'>
+                <h1 onClick={() => {
+                setHit()
+                }}>{hit}</h1>
+        </div> {/* result end */}
 
         <div className='display'>
             <h2 id='strike'>Strike</h2>
