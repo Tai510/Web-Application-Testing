@@ -72,29 +72,34 @@ function DashBoard() {
     </div> {/* scores end */}
 
         <div className='display'>
+            <h2 id='strike'>Strike</h2>
             <h1 onClick={() => {
                 setStrike(0)
-            }}>Strike : {strike}</h1>
+            }}>{strike}</h1>
+
+            <h2 id='ball'>Ball</h2>
             <h1 onClick={() => {
                 setBall(0)
-            }}>Ball : {ball}</h1>
-            <h2 onClick={() => {
+            }}>{ball}</h1>
+
+            <h2 id='foul'>Foul</h2>
+            <h1 onClick={() => {
                 setFoul(0)
-            }}>Foul : {foul}</h2>
+            }}>{foul}</h1>
         </div> {/* display end */}
 
         <div className='dashBoard'>
-                <button onClick={() => {
+                <button id='strike' onClick={() => {
                     for(var i = strike; i < 3; i++) {
                     setStrike(strike + 1)
                     }
                 }}>Strike</button>
-                <button onClick={() => {
+                <button id='ball' onClick={() => {
                     for(var i = ball; i < 4; i++) {
                     setBall(ball + 1)
                     }
                 }}>Ball</button>
-                <button onClick={() => {
+                <button id='foul' onClick={() => {
                     for(var i = foul; i < 4; i++) {
                     setFoul(foul + 1)
                     }

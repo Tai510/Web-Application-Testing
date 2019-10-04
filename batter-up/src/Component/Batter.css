@@ -68,6 +68,25 @@
 
 .display h1 {
     cursor: pointer;
+    border: 3px solid white;
+    width: 200px;
+    background: black;
+    font-size: 49px;
+    height: 62px;
+}
+
+.display h2 {
+    cursor: pointer;
+    border: 3px solid white;
+    width: 200px;
+    background: black;
+    font-size: 40px;
+    height: 62px;
+}
+
+.display span {
+    border: 3px solid white;
+    height: 50px;
 }
 
 .dashBoard {
@@ -156,7 +175,7 @@
     height: 225px;
     width: 210px;
     background: black;
-    margin-top: 63px;
+    margin-top: 14px;
 }
 
 .home span h3 {
@@ -190,7 +209,7 @@
     height: 225px;
     width: 210px;
     background: black;
-    margin-top: 63px;
+    margin-top: 14px;
 }
 
 .away h3 {
@@ -210,5 +229,17 @@
     width: 140px;
     font-size: 26px;
     background: #45B62F;
+}
+
+#strike {
+    background: red;
+}
+
+#ball {
+    background: #F1D630;
+}
+
+#foul {
+    background: #B22EBE;
 }
 
