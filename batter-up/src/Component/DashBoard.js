@@ -14,8 +14,7 @@ function DashBoard(props) {
     const [awayscore, setAwayScore] = useState(0);
     var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!'];
     var coinToss = ['HEAD', 'TAIL'];    
-    const [players, setPlayers] = useState([]);
-
+   
     return (
     <div className='Batter-Up'>
      
@@ -78,6 +77,7 @@ function DashBoard(props) {
                 <form>
                     <input name='player1' placeholder='Player 1'></input>
                     <input name='player2' placeholder='Player 2'></input>
+                    <button>Save Players</button>
                 </form>
         </div> {/* Players end */}
 
