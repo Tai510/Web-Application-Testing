@@ -28,7 +28,6 @@
     padding: 0px 50px;
     background: #42C67B;
     margin: 10px auto;
-    
 }
 
 .coin-Toss h1 {
@@ -46,13 +45,38 @@
     padding-top: 43px;
 }
 
+.header {
+    display: flex;
+    background: #C66A42;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.header p {
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: 5px solid white;
+    padding: 10px;
+}
+
+#homeOut {
+    background: #CB3F3F;
+    width: 295px;
+}
+
+#awayOut {
+    background: #476EB7;
+    width: 295px;
+}
+
 .header h1 {
     font-size: 80px;
     font-family: 'Notable', sans-serif;
     color: white;
     text-shadow: 1px 1px black;
     margin: 0;
-    background: #C66A42;
+    
 
 }
 
@@ -94,9 +118,12 @@
     height: 100px;
     margin: auto;
     padding-top: 50px;
+    border: 5px solid white;
+    background: #9AB1B5;
+    border-radius: 5px;
 }
 
-.Batter-Up button {
+.dashBoard button {
     height: 50px;
     width: 100px;
     margin: 10px;
@@ -109,6 +136,7 @@
     background: #B0B0B0;
     color: white;
     text-shadow: 1px 1px black;
+    border: 3px solid white;
 }
 
 .status {
@@ -243,3 +271,28 @@
     background: #B22EBE;
 }
 
+
+.Players {
+    border: 3px solid white;
+    height: 300px;
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Players input {
+    width: 225px;
+    height: 35px;
+    margin: 20px;
+    font-size: 20px;
+    background: #3B5573;
+    border: 1px solid #3B5573;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+}
+
+.Players input::placeholder {
+    color: white;
+    text-shadow: 1px 1px black;
+}

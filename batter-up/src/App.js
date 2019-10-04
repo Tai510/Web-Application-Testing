@@ -4,13 +4,10 @@ import './App.css';
 import DashBoard from './Component/DashBoard';
 
 function App() {
-  const [ball, setBall] = useState(0);
-    const [strike, setStrike] = useState(0);
-    const [foul, setFoul] = useState(0);
-    const [hit, setHit] = useState([]);
+    
   return (
     <div className="App">
-          <DashBoard ball={ball} strike={strike} foul={foul} />
+          <DashBoard />
     </div>
   );
 }

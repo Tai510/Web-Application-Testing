@@ -1,18 +1,20 @@
 import React, {useState} from 'react';
 import './Batter.css'
 
-function DashBoard() {
+function DashBoard(props) {
  
     const [ball, setBall] = useState(0);
     const [strike, setStrike] = useState(0);
     const [foul, setFoul] = useState(0);
-    const [out, setOut] = useState(0);
+    const [homeOut, setHomeOut] = useState(0);
+    const [awayOut, setAwayOut] = useState(0);
     const [hit, setHit] = useState([]);
     const [toss, setToss] = useState([]);
     const [homescore, setHomeScore] = useState(0);
     const [awayscore, setAwayScore] = useState(0);
     var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!'];
-    var coinToss = ['HEAD', 'TAIL'];
+    var coinToss = ['HEAD', 'TAIL'];    
+    const [players, setPlayers] = useState([]);
 
     return (
     <div className='Batter-Up'>
@@ -28,7 +30,9 @@ function DashBoard() {
         </div> {/* coin-Toss end */}
         
         <div className='header'>
+            <p id='homeOut'>Home Out {homeOut}</p>
             <h1>Batter Up</h1>
+            <p id='awayOut'>Away Out {awayOut}</p>
         </div> {/* header end */}
 
     <div className='scores'>
@@ -66,10 +70,16 @@ function DashBoard() {
                     setAwayScore(awayscore - 1)
                 }}><i class="fas fa-minus"></i></button>
             </div> {/* plus-minus end */}
-
         </div> {/* away end */}
 
     </div> {/* scores end */}
+
+        <div className='Players'>
+                <form>
+                    <input name='player1' placeholder='Player 1'></input>
+                    <input name='player2' placeholder='Player 2'></input>
+                </form>
+        </div> {/* Players end */}
 
         <div className='display'>
             <h2 id='strike'>Strike</h2>
@@ -92,6 +102,10 @@ function DashBoard() {
                 <button id='strike' onClick={() => {
                     for(var i = strike; i < 3; i++) {
                     setStrike(strike + 1)
+                    }
+                    if(strike === 2) {
+                        setHomeOut(homeOut + 1);
+                        setStrike(0);
                     }
                 }}>Strike</button>
                 <button id='ball' onClick={() => {
