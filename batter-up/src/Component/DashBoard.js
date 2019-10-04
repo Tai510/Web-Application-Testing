@@ -12,11 +12,11 @@ function DashBoard(props) {
     const [toss, setToss] = useState([]);
     const [homescore, setHomeScore] = useState(0);
     const [awayscore, setAwayScore] = useState(0);
-    var myArray = ['STRIKE', 'BALL', 'FOUL', 'HOME RUN !!!'];
-    var coinToss = ['HEAD', 'TAIL'];  
-    
     const [players1, setPlayers1] = useState('Player 1')
     const [players2, setPlayers2] = useState('Player 2')
+    var myArray = ['STRIKE', 'BALL', 'FOUL', `${players1} HITS A HOME RUN !!!`];
+    var coinToss = ['HEAD', 'TAIL'];  
+
 
     function p1HandleChange(e) {
         setPlayers1(e.target.value);
