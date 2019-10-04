@@ -16,9 +16,7 @@ function DashBoard() {
 
     return (
     <div className='Batter-Up'>
-
-        {/* <div></div> */}
-
+     
         <div className='coin-Toss'>
             <h2>Click the ball for a coin toss!</h2>
             <i onClick={() => {
@@ -27,11 +25,11 @@ function DashBoard() {
             <h1 onClick={() => {
                 setToss()
             }}>{toss}</h1>
-        </div>
+        </div> {/* coin-Toss end */}
         
         <div className='header'>
             <h1>Batter Up</h1>
-        </div>
+        </div> {/* header end */}
 
     <div className='scores'>
 
@@ -57,7 +55,7 @@ function DashBoard() {
             </div> {/* result end */}
 
         <div className='away'>
-            <span><h3>Home</h3></span>
+            <span><h3>Away</h3></span>
                 <h3>{awayscore}</h3>
 
             <div className='plus-minus'>
@@ -101,10 +99,9 @@ function DashBoard() {
                     setFoul(foul + 1)
                     }
                 }}>Foul</button>
-                <button onClick={() => {
+                <button id='play-Ball' onClick={() => {
                     setHit(myArray[Math.floor(Math.random() * myArray.length)])
                 }}>Play Ball</button>
-
         </div> {/* dashBoard end  */}
 
     </div> /* Batter-Up end */

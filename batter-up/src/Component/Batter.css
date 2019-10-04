@@ -168,7 +168,12 @@
 }
 
 .home i {
-    font-size: 40px;
+    font-size: 30px;
+    padding: 0;
+}
+
+.away i {
+    font-size: 30px;
     padding: 0;
 }
 
@@ -198,5 +203,12 @@
 
 .plus-minus {
     display: flex;
+}
+
+#play-Ball {
+    height: 68px;
+    width: 140px;
+    font-size: 26px;
+    background: #45B62F;
 }
 
